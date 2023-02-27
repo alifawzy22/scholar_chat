@@ -21,10 +21,10 @@ class ScolarChat extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        LoginScreen.id: (context) => const LoginScreen(),
-        RegisterScreen.id: (context) => const RegisterScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+        RegisterScreen.id: (context) => RegisterScreen(),
       },
-      home: const LoginScreen(),
+      initialRoute: LoginScreen.id,
     );
   }
 }

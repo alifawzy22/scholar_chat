@@ -1,31 +1,42 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+
 import 'package:flutter/material.dart';
 
-
-class CustomTextField extends StatelessWidget {
+class CustomTextFormField extends StatelessWidget {
   final String? hintText;
-  const CustomTextField({this.hintText,Key? key}):super(key: key) ;
+  final String? Function(String? data)? validateFunction;
+  final void Function(String data)? onChangeFunction;
+  const CustomTextFormField({
+    Key? key,
+    this.hintText,
+    this.validateFunction,
+    this.onChangeFunction,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       decoration: InputDecoration(
-        hintText: hintText,
-        hintStyle:const TextStyle(
+        errorStyle: const TextStyle(
           color: Colors.white,
         ),
-        
-        enabledBorder:const OutlineInputBorder(
+        hintText: hintText,
+        hintStyle: const TextStyle(
+          color: Colors.white,
+        ),
+        enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.white,
           ),
         ),
-
-        border:const OutlineInputBorder(
+        border: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.white,
           ),
         ),
       ),
+      validator: validateFunction,
+      onChanged: onChangeFunction,
     );
   }
 }
