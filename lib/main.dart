@@ -10,7 +10,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(ScolarChat());
+  runApp(const ScolarChat());
 }
 
 class ScolarChat extends StatelessWidget {
@@ -21,10 +21,10 @@ class ScolarChat extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        LoginScreen.Id: (context) => LoginScreen(),
-        RegisterScreen.Id: (context) => RegisterScreen(),
+        LoginScreen.id: (context) => const LoginScreen(),
+        RegisterScreen.id: (context) => const RegisterScreen(),
       },
-      home: LoginScreen(),
+      home: const LoginScreen(),
     );
   }
 }

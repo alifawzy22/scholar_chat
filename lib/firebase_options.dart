@@ -47,30 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyApcCIWhSoc0xLBD-WuH8DdrBpk2HMVRkA',
-    appId: '1:42150383649:web:bee4bf9d0f6ee0b9f3d360',
-    messagingSenderId: '42150383649',
-    projectId: 'chat-app-fa47b',
-    authDomain: 'chat-app-fa47b.firebaseapp.com',
-    storageBucket: 'chat-app-fa47b.appspot.com',
-    measurementId: 'G-RNB9053XWG',
+    apiKey: 'AIzaSyBg5dU1sEN46ql7xnm3nzIjjFC6A8YxegY',
+    appId: '1:383502342599:web:820396b8bb5f1eb448a1e2',
+    messagingSenderId: '383502342599',
+    projectId: 'scholar-app-b9dfc',
+    authDomain: 'scholar-app-b9dfc.firebaseapp.com',
+    storageBucket: 'scholar-app-b9dfc.appspot.com',
+    measurementId: 'G-GZC06437YM',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBsnxfZrD8Ql37Fxtxr7E7xUon9cy-ztSg',
-    appId: '1:42150383649:android:cd993c38bcb8883af3d360',
-    messagingSenderId: '42150383649',
-    projectId: 'chat-app-fa47b',
-    storageBucket: 'chat-app-fa47b.appspot.com',
+    apiKey: 'AIzaSyCK37Nm59q78lxKxMLbCnnTwz3gHL_2UOY',
+    appId: '1:383502342599:android:6043414c39e9ca1e48a1e2',
+    messagingSenderId: '383502342599',
+    projectId: 'scholar-app-b9dfc',
+    storageBucket: 'scholar-app-b9dfc.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAiWEuW_x1FruR4DfLYdCOHtpqEx3R-JzY',
-    appId: '1:42150383649:ios:d7eaf17c3e52b1d2f3d360',
-    messagingSenderId: '42150383649',
-    projectId: 'chat-app-fa47b',
-    storageBucket: 'chat-app-fa47b.appspot.com',
-    iosClientId: '42150383649-3rol9j0n36orrv0lf983ro2thgahq1k7.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAVpmNOCIfauPgsJAMYeo7kDkI6Am_WUCM',
+    appId: '1:383502342599:ios:bbd6d73a7788de1448a1e2',
+    messagingSenderId: '383502342599',
+    projectId: 'scholar-app-b9dfc',
+    storageBucket: 'scholar-app-b9dfc.appspot.com',
+    iosClientId: '383502342599-024fcddgqtan53vjrv2e95fpa4vbuvel.apps.googleusercontent.com',
     iosBundleId: 'com.example.scholarChat',
   );
 }

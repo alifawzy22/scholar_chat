@@ -6,13 +6,13 @@ import '../widgets/custom_text_field.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({Key? key}) : super(key: key);
-  static String Id = 'LoginScreen';
+  static String id = 'LoginScreen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: ListView(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 8,
         ),
         children: [
@@ -23,7 +23,7 @@ class RegisterScreen extends StatelessWidget {
             'assets/images/scholar.png',
             height: 80,
           ),
-          Text(
+          const Text(
             'Scholar Chat',
             style: TextStyle(
               fontSize: 32,
@@ -36,7 +36,7 @@ class RegisterScreen extends StatelessWidget {
           const SizedBox(
             height: 60,
           ),
-          Text(
+          const Text(
             'Register',
             style: TextStyle(
               fontSize: 24,
@@ -46,13 +46,13 @@ class RegisterScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          CustomTextField(
+          const CustomTextField(
             hintText: 'Email',
           ),
           const SizedBox(
             height: 10,
           ),
-          CustomTextField(
+          const CustomTextField(
             hintText: 'Password',
           ),
           const SizedBox(
@@ -68,7 +68,7 @@ class RegisterScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'already have an account?  ',
                 style: TextStyle(
                   color: Colors.white,
@@ -78,7 +78,7 @@ class RegisterScreen extends StatelessWidget {
                 onTap: () {
                   Navigator.pop(context);
                 },
-                child: Text(
+                child: const Text(
                   'Login',
                   style: TextStyle(
                     color: Color(0xFFd3f3f3),

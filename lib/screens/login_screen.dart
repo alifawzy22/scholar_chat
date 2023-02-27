@@ -8,13 +8,13 @@ import 'package:scholar_chat/widgets/custom_text_field.dart';
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
-  static String Id = 'LoginScreen';
+  static String id = 'LoginScreen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: ListView(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 8,
         ),
         children: [
@@ -25,7 +25,7 @@ class LoginScreen extends StatelessWidget {
             'assets/images/scholar.png',
             height: 80,
           ),
-          Text(
+          const Text(
             'Scholar Chat',
             style: TextStyle(
               fontSize: 32,
@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
           const SizedBox(
             height: 60,
           ),
-          Text(
+          const Text(
             'LOGIN',
             style: TextStyle(
               fontSize: 24,
@@ -48,13 +48,13 @@ class LoginScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          CustomTextField(
+          const CustomTextField(
             hintText: 'Email',
           ),
           const SizedBox(
             height: 10,
           ),
-          CustomTextField(
+          const CustomTextField(
             hintText: 'Password',
           ),
           const SizedBox(
@@ -70,7 +70,7 @@ class LoginScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'don\'t have an account?  ',
                 style: TextStyle(
                   color: Colors.white,
@@ -78,9 +78,9 @@ class LoginScreen extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, RegisterScreen.Id);
+                  Navigator.pushNamed(context, RegisterScreen.id);
                 },
-                child: Text(
+                child: const Text(
                   'Register',
                   style: TextStyle(
                     color: Color(0xFFd3f3f3),
