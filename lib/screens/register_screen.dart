@@ -106,7 +106,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       setState(() {
                         ismodalLoading = false;
                       });
-                      Navigator.pushNamed(context, ChatPage.id);
+                      Navigator.pushNamed(context, ChatPage.id,
+                          arguments: emailAddress);
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'weak-password') {
                         ShowSnackBar.snackBarFunction(context,

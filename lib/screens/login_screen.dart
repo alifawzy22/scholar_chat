@@ -106,7 +106,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     try {
                       await signInWithEmailAndPassword();
 
-                      Navigator.pushNamed(context, ChatPage.id);
+                      Navigator.pushNamed(context, ChatPage.id,
+                          arguments: userName);
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {
                         ShowSnackBar.snackBarFunction(context,
