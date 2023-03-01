@@ -80,6 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 10,
               ),
               CustomTextFormField(
+                obsecureText: true,
                 onChangeFunction: (data) {
                   setState(() {
                     password = data;

@@ -79,6 +79,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: 10,
               ),
               CustomTextFormField(
+                obsecureText: true,
                 onChangeFunction: (data) {
                   password = data;
                   setState(() {});

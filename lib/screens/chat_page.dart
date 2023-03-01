@@ -48,13 +48,17 @@ class ChatPage extends StatelessWidget {
                             ? chatBuble(
                                 txtMessage: snapshot.data!.docs[index]
                                     ['message'],
-                                date: snapshot.data!.docs[index]['date'],
+                                date: DateFormat('yy/MM/dd-hh:mm:ss').format(
+                                    snapshot.data!.docs[index]['date']
+                                        .toDate()),
                                 userId: snapshot.data!.docs[index]['id'],
                               )
                             : chatBubleForFriends(
                                 txtMessage: snapshot.data!.docs[index]
                                     ['message'],
-                                date: snapshot.data!.docs[index]['date'],
+                                date: DateFormat('yy/MM/dd-hh:mm:ss').format(
+                                    snapshot.data!.docs[index]['date']
+                                        .toDate()),
                                 userId: snapshot.data!.docs[index]['id'],
                               );
                       }),
@@ -70,12 +74,10 @@ class ChatPage extends StatelessWidget {
                     keyboardType: TextInputType.text,
                     controller: txtFieldController,
                     onSubmitted: (value) {
-                      DateTime now = DateTime.now();
-                      String formattedDate =
-                          DateFormat('yy/MM/dd-hh:mm:ss').format(now);
+                      DateTime date = DateTime.now();
 
-                      final message = Message(
-                          message: value, date: formattedDate, id: email);
+                      final message =
+                          Message(message: value, date: date, id: email);
                       messages.add(Message.toFireStore(message));
 
                       txtFieldController.clear();
@@ -112,13 +114,11 @@ class ChatPage extends StatelessWidget {
                       ),
                       suffixIcon: IconButton(
                           onPressed: () {
-                            DateTime now = DateTime.now();
-                            String formattedDate =
-                                DateFormat('yy/MM/dd-hh:mm:ss').format(now);
+                            DateTime date = DateTime.now();
 
                             final message = Message(
                                 message: txtFieldController.text,
-                                date: formattedDate,
+                                date: date,
                                 id: email);
                             messages.add(Message.toFireStore(message));
 

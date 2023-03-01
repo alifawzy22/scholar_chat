@@ -1,6 +1,6 @@
 class Message {
   final String message;
-  final String date;
+  final DateTime date;
   final String id;
 
   Message({required this.message, required this.date, required this.id});
