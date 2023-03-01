@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scholar_chat/Models/message.dart';
-import 'package:scholar_chat/common/show_snack_bar.dart';
 import 'package:scholar_chat/constant.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../widgets/chat_buble.dart';
 
+// ignore: must_be_immutable
 class ChatPage extends StatelessWidget {
   ChatPage({Key? key}) : super(key: key);
   static String id = 'ChatPage Screen';
@@ -83,7 +83,7 @@ class ChatPage extends StatelessWidget {
                       txtFieldController.clear();
                       _controller.animateTo(
                         0,
-                        duration: Duration(seconds: 1),
+                        duration: const Duration(seconds: 1),
                         curve: Curves.easeIn,
                       );
                     },
@@ -140,11 +140,11 @@ class ChatPage extends StatelessWidget {
             ),
           );
         } else if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         } else {
-          return Center(
+          return const Center(
             child: Text('There is Error'),
           );
         }

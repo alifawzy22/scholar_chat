@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../constant.dart';
 
+// ignore: camel_case_types
 class chatBuble extends StatelessWidget {
   final String txtMessage;
   final String date;
@@ -58,6 +59,7 @@ class chatBuble extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class chatBubleForFriends extends StatelessWidget {
   final String txtMessage;
   final String date;
